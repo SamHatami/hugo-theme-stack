@@ -1,11 +1,11 @@
 {{ $id := default (printf "canvas-%d" (now.UnixNano)) (.Get "id") }}
-{{ $width := default "100%" (.Get "width") }}
+{{ $width := default "50%" (.Get "width") }}
 {{ $height := default "400px" (.Get "height") }}
 {{ $fragment := .Inner }}
 
 <div class="glsl-canvas-container">
   <canvas id="{{ $id }}" style="width: {{ $width }}; height: {{ $height }};"></canvas>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/glslCanvas/0.2.6/GlslCanvas.min.js"></script>
+  <script src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const canvas = document.getElementById('{{ $id }}');
