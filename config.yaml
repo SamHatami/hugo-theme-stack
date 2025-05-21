@@ -147,3 +147,7 @@ params:
             enabled: true
         content:
             enabled: true
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
