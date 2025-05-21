@@ -1,5 +1,5 @@
 {{ $id := default (printf "canvas-%d" (now.UnixNano)) (.Get "id") }}
-{{ $width := default "50%" (.Get "width") }}
+{{ $width := default "100%" (.Get "width") }}
 {{ $height := default "400px" (.Get "height") }}
 {{ $fragment := .Inner }}
 
